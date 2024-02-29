@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lesson-10.1 pokemon search sort...</title>
+        <link rel="stylesheet" href="./src/output.css">
+    </head>
+    <body class="bg-yellow-400">
+        <!-- header poke form -->
+        <header>
+            <nav>
+                <div class="container m-auto px-10">
+                    <div class="mb-10">
+                        <img class="m-auto" src="./src/images/Pokemon_de.svg"
+                            alt="poke-img">
+                    </div>
+                    <div
+                        class="text-yellow-800 text-lg font-medium">
+                        <form class="js-poke-form">
+                            <input
+                                class="p-2  rounded placeholder:text-yellow-600 w-64 bg-yellow-100 js-search-input"
+                                type="text" placeholder="Search...">
+                            <select
+                                class="bg-yellow-100  w-40 p-2 rounded js-poke-weaknesses">
+                                <option value="all">All</option>
+                            </select>
+                            <select
+                                class="bg-yellow-100 0 w-40 p-2 rounded js-poke-sort">
+                                <option value="sort" selected
+                                    disabled>Sort</option>
+                                <option value="a-z">A to Z</option>
+                                <option value="z-a">Z to A</option>
+                                <option value="big-weight">Big Weight</option>
+                                <option value="small-weight">Small
+                                    Weight</option>
+                            </select>
+                            <button
+                                class="p-2 px-4 rounded bg-yellow-100"
+                                type="submit">Click</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- section poke render -->
+        <section>
+            <div class="container m-auto px-10">
+                <div class="mt-10">
+                    <p
+                        class="text-red-600 hidden bg-red-100 p-2 rounded text-center js-not-found">NOT
+                        FOUND ?</p>
+                    <ul
+                        class="flex flex-wrap  gap-7 js-poke-render ">
+                    </ul>
+                </div>
+            </div>
+            <template class="js-template">
+                <li
+                    class="bg-yellow-300 border border-yellow-500 relative p-2 rounded m-0 w-[270px] ">
+                    <img class="w-full js-poke-img" src alt>
+                    <h3
+                        class="text-2xl text-center font-semibold js-poke-name"></h3>
+                    <div class="bg-yellow-400 shadow-lg">
+                        <p class="my-2 text-xl text-center js-poke-candy"></p>
+                        <div class="flex items-center justify-around">
+                            <strong class="js-poke-height"></strong>
+                            <strong class="js-poke-weight"></strong>
+                            <strong class="js-poke-spawns"></strong>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-green-700 p-2 w-full mt-2 shadow-lg text-white hover:bg-green-800">More
+                        Info</button>
+                    <span
+                        class="absolute top-0 left-0 bg-yellow-500 p-1 px-2 rounded-br-lg js-poke-span">001</span>
+                </li>
+            </template>
+        </section>
+        <script src="./src/js/pokemon.js"></script>
+        <script src="./src/js/script.js"></script>
+    </body>
+</html>
